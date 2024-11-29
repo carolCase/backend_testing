@@ -1,4 +1,4 @@
-package model
+package com.carolCase.backend_testing.model
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
