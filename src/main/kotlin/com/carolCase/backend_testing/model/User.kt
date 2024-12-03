@@ -1,11 +1,9 @@
 package com.carolCase.backend_testing.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
 
 @Entity
+@Table(name = "users") // user tabellen ger error, så använder @Table för at byta namn på tabellen
 data class User(
     val userName: String = "",
     val password: String = "",
