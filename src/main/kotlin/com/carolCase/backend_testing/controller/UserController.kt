@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.server.ResponseStatusException
-import java.util.*
+
 
 
 @RestController
@@ -57,7 +57,7 @@ class UserController(@Autowired val userRepository: UserRepository) {
         return userRepository.save(updateUser)
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}") //med orElseThrow kunde jag fixa errorn med delete så den är bra
     fun deleteMember(@PathVariable("id") id: Long): String {
         println("Attempting to delete user with ID: $id")
         val existingUser = userRepository.findById(id)
